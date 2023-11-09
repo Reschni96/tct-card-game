@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plays By Day</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="unique-banner-container">
+        <img src="/static/images/CampaignTrailMojo.png" alt="Site Banner" class="site-banner">
+    </div>
+    <div class="main-container">
+    <h1>Plays by Month</h1>
+    {% include '_navbar.html' %}
+    <br>
+    <i>Click the month for more details!</i>
+    <table class="stats-table">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Total Plays</th>
+                <th>Most Played Mod (Month)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in monthly_stats %}
+                {% set year, month = entry.month.split('-')|map("int") %}
+                {% set last_day = last_day_of_month(year, month) %}
+                <tr>
+                    <td><a href="{{ url_for('mod_plays_by_period', date=last_day, period='month') }}">{{ entry.month }}</a></td>
+                    <td>{{ entry.total_plays }}</td>
+                    <td>{{ entry.most_played_mod.name }} ({{ entry.most_played_mod.play_count }})</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

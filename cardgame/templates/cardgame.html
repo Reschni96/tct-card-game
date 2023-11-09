@@ -1,0 +1,35 @@
+<!-- templates/cardgame.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Card Game</title>
+</head>
+<body>
+    <div class="unique-banner-container">
+        <img src="/static/images/CampaignTrailMojo.png" alt="Site Banner" class="site-banner">
+    </div>
+    <div class="main-container">
+   <h1>CARDGAME</h1>
+    {% include '_navbar.html' %}
+    <div class="button-container" style="display: flex; flex-direction: column; align-items: center; margin-top: 150px;">
+        <!-- Create New Game Form -->
+        <form action="{{ url_for('cardgame.create_game') }}" method="post" style="margin: 10px;">
+            <input type="submit" class="button" style="font-size: 20px;" value="Create new game">
+        </form>
+        <!-- Rules Button -->
+        <a href="#" class="button" style="font-size: 20px; margin: 10px;" onclick="showRules()">Rules</a>
+    </div>
+    </div>
+    <script>
+        function showRules() {
+            // This function can be used to show the game rules
+            console.log("Displaying game rules");
+        }
+    </script>
+
+</body>
+</html>
+

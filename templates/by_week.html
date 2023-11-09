@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plays By Week</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="unique-banner-container">
+        <img src="/static/images/CampaignTrailMojo.png" alt="Site Banner" class="site-banner">
+    </div>
+    <div class="main-container">
+    <h1>Plays by Week</h1>
+    {% include '_navbar.html' %}
+    <br>
+    <i>Click the week for more details!</i>
+    <table class="stats-table">
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Total Plays</th>
+                <th>Most Played Mod (Plays)</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for stats in weekly_stats %}
+            {% set year, week_number = stats.week.split('-') %}
+            {% set week_ending = (datetime.strptime(year + '-W' + week_number + '-0', "%Y-W%U-%w") + timedelta(days=7)).strftime('%Y-%m-%d') %}
+            <tr>
+                <td><a href="{{ url_for('mod_plays_by_period', date=week_ending, period='week') }}">{{ stats.week }}</a></td>
+                <td>{{ stats.total_plays }}</td>
+                <td>{{ stats.most_played_mod.name }} ({{ stats.most_played_mod.play_count }})</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Plays</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="unique-banner-container">
+        <img src="/static/images/CampaignTrailMojo.png" alt="Site Banner" class="site-banner">
+    </div>
+    <div class="main-container">
+    <h1>Recent Plays</h1>
+    {% include '_navbar.html' %}
+
+    <!-- Display recent plays data -->
+        {% if data %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Total Plays</th>
+                    <th>Most Plays</th>
+                </tr>
+            </thead>
+            <tbody>
+    <!-- Last Day Row -->
+    <tr class="time-period" data-days="1">
+        <td><span class="arrow-indicator"></span>Last Day</td>
+        <td>{{ data.total_plays.last_day.change }}</td>
+        <td>{{ data.total_plays.last_day.most_played_mod.name }} ({{ data.total_plays.last_day.most_played_mod.play_count }})</td>
+    </tr>
+    <tr class="top-mods-box" style="display: none;">
+        <td colspan="2">
+            <table class="top-mods-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TOP TEN</th>
+                    </tr>
+                    <tr>
+                        <th>Mod Name</th>
+                        <th>Plays</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Top mods data for Last Day will be displayed here -->
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    <!-- Last Three Days Row -->
+    <tr class="time-period" data-days="3">
+        <td><span class="arrow-indicator"></span>Last Three Days</td>
+        <td>{{ data.total_plays.last_three_days.change }}</td>
+        <td>{{ data.total_plays.last_three_days.most_played_mod.name }} ({{ data.total_plays.last_three_days.most_played_mod.play_count }})</td>
+    </tr>
+    <tr class="top-mods-box" style="display: none;">
+        <td colspan="2">
+            <table class="top-mods-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TOP TEN</th>
+                    </tr>
+                    <tr>
+                        <th>Mod Name</th>
+                        <th>Plays</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Top mods data for Last Three Days will be displayed here -->
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    <!-- Last Week Row -->
+    <tr class="time-period" data-days="7">
+        <td><span class="arrow-indicator"></span>Last Seven Days</td>
+        <td>{{ data.total_plays.last_week.change }}</td>
+        <td>{{ data.total_plays.last_week.most_played_mod.name }} ({{ data.total_plays.last_week.most_played_mod.play_count }})</td>
+    </tr>
+    <tr class="top-mods-box" style="display: none;">
+        <td colspan="2">
+            <table class="top-mods-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TOP TEN</th>
+                    </tr>
+                    <tr>
+                        <th>Mod Name</th>
+                        <th>Plays</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Top mods data for Last Week will be displayed here -->
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    <!-- Last Month Row -->
+    <tr class="time-period" data-days="30">
+        <td><span class="arrow-indicator"></span>Last Thirty Days</td>
+        <td>{{ data.total_plays.last_month.change }}</td>
+        <td>{{ data.total_plays.last_month.most_played_mod.name }} ({{ data.total_plays.last_month.most_played_mod.play_count }})</td>
+    </tr>
+    <tr class="top-mods-box" style="display: none;">
+        <td colspan="2">
+            <table class="top-mods-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TOP TEN</th>
+                    </tr>
+                    <tr>
+                        <th>Mod Name</th>
+                        <th>Plays</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Top mods data for Last Month will be displayed here -->
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</tbody>
+
+        </table>
+    {% else %}
+        <p>No data available for the recent plays.</p>
+    {% endif %}
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('.time-period').click(function() {
+            const days = $(this).data('days');
+            const topModsBox = $(this).next('.top-mods-box');
+
+            // Remove 'active' class from all rows except the clicked one
+            $('.time-period').not(this).removeClass('active');
+
+            // Toggle the 'active' class on the clicked row
+            $(this).toggleClass('active');
+
+            // Fetch top mods data
+            $.ajax({
+                url: `/get_top_mods/${days}`,
+                type: 'GET',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.error) {
+                        alert(response.error);
+                    } else {
+                        const topMods = response.top_mods;
+                        let topModsHtml = '<h3>TOP TEN</h3><table><thead><tr><th>Mod Name</th><th>Plays</th></tr></thead><tbody>';
+                        for (let i = 0; i < topMods.length; i++) {
+                            topModsHtml += `<tr><td>${topMods[i].mod_name}</td><td>${topMods[i].play_count_change}</td></tr>`;
+                        }
+                        topModsHtml += '</tbody></table>';
+
+                        // Inject top mods data into the corresponding box and show it
+                        topModsBox.find('td').html(topModsHtml);
+                        topModsBox.toggle();
+                    }
+                },
+                error: function() {
+                    alert('Failed to fetch data.');
+                }
+            });
+        });
+    });
+</script>
+
+
+</html>

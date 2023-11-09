@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampaignTrailMojo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .sort-buttons {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #333366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .sort-buttons:hover {
+            background-color: #555588;
+        }
+    </style>
+</head>
+<body>
+    <div class="unique-banner-container">
+        <img src="/static/images/CampaignTrailMojo.png" alt="Site Banner" class="site-banner">
+    </div>
+    <div class="main-container">
+    <h1>Total Plays & Favourites</h1>
+    {% include '_navbar.html' %}
+    <div>
+        <button class="sort-buttons" onclick="window.location.href='/?sort_by=value'">Sort by Year</button>
+        <button class="sort-buttons" onclick="window.location.href='/?sort_by=play_count'">Sort by Plays</button>
+        <button class="sort-buttons" onclick="window.location.href='/?sort_by=favs'">Sort by Favourites</button>
+    </div>
+    <i>Click the mod name for more details!</i>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Plays</th>
+                <th>Favourites</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mod in data %}
+                <tr>
+                    <td><a href="{{ url_for('mod_detail', mod_name=mod['value']) }}">{{ mod['name'] }}</a></td>
+                    <td>{{ mod['play_count'] }}</td>
+                    <td>{{ mod['favs'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

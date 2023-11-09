@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod Plays on {{ date }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="unique-banner-container">
+        <img src="/static/images/CampaignTrailMojo.png" alt="Site Banner" class="site-banner">
+    </div>
+    <div class="main-container">
+    <h1>Mod Plays on {{ date }}</h1>
+    {% include '_navbar.html' %}
+
+    <div class="navigation-buttons">
+        {% if previous_date %}
+            <a href="{{ url_for('mod_plays_by_period', date=previous_date, period=period) }}" class="button">Previous {{ period.capitalize() }}</a>
+        {% endif %}
+        {% if current_date %}
+            <a href="{{ url_for('mod_plays_by_period', date=current_date, period=period) }}" class="button">Next {{ period.capitalize() }}</a>
+        {% endif %}
+        <a href="{{ url_for('by_' + period) }}" class="button">Back</a>
+    </div>
+
+    <!-- Display error message -->
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+
+    <!-- Display mod plays data -->
+    {% if mod_plays %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Mod Name</th>
+                    <th>Plays</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mod in mod_plays %}
+                    <tr>
+                        <td>{{ mod.name }}</td>
+                        <td>{{ mod.play_count_change }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+</body>
+</html>

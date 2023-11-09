@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="game-outer-container">
+        <div id="game-container">
+            <div id="opponent-area">
+                <div id="opponent-hand" class="hand">
+                    <!-- Player's cards will be rendered here -->
+                </div>
+                <div id="opponent-retire" class="retire-pile"></div>
+                <div id="opponent-board" class="board">
+
+                    <div id="opponent-slot-9" class="slot left"></div>
+                    <div id="opponent-slot-8" class="slot left"></div>
+                    <div id="opponent-slot-7" class="slot left"></div>
+                    <div id="opponent-slot-6" class="slot center"></div>
+                    <div id="opponent-slot-5" class="slot center"></div>
+                    <div id="opponent-slot-4" class="slot center"></div>
+                    <div id="opponent-slot-3" class="slot right"></div>
+                    <div id="opponent-slot-2" class="slot right"></div>
+                    <div id="opponent-slot-1" class="slot right"></div>
+                </div>
+                <div id="opponent-deck" class="deck"></div>
+            </div>
+            <div id="player-area">
+                <div id="player-retire" class="retire-pile"></div>
+                <div id="player-board" class="board">
+
+                    <div id="player-slot-1" class="slot left"></div>
+                    <div id="player-slot-2" class="slot left"></div>
+                    <div id="player-slot-3" class="slot left"></div>
+                    <div id="player-slot-4" class="slot center"></div>
+                    <div id="player-slot-5" class="slot center"></div>
+                    <div id="player-slot-6" class="slot center"></div>
+                    <div id="player-slot-7" class="slot right"></div>
+                    <div id="player-slot-8" class="slot right"></div>
+                    <div id="player-slot-9" class="slot right"></div>
+                </div>
+                <div id="player-hand" class="hand">
+                    <!-- Player's cards will be rendered here -->
+                </div>
+                <div id="player-deck" class="deck"></div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>

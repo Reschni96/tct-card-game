@@ -1,0 +1,759 @@
+[
+    {
+        "value": "other",
+        "data-tags": [],
+        "name": "Other",
+        "favs": 0,
+        "play-count": 0
+    },
+    {
+        "value": "0000Random_Mod",
+        "data-tags": [
+            "Funny"
+        ],
+        "name": "Random Scenario",
+        "favs": 78,
+        "play-count": 3394
+    },
+    {
+        "value": "0004352BCE",
+        "data-tags": [
+            "International"
+        ],
+        "name": "4352 BCE: Cold Famine",
+        "favs": 82,
+        "play-count": 4855
+    },
+    {
+        "value": "0036AD",
+        "data-tags": [
+            "Historical",
+            "International"
+        ],
+        "name": "36 \u2013 64 AD: The Apostle to the Gentiles",
+        "favs": 49,
+        "play-count": 833
+    },
+    {
+        "value": "1498 Florence",
+        "data-tags": [
+            "Historical",
+            "International"
+        ],
+        "name": "1498 Florence",
+        "favs": 75,
+        "play-count": 628
+    },
+    {
+        "value": "1792",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1792: The Young Republic",
+        "favs": 31,
+        "play-count": 590
+    },
+    {
+        "value": "1793",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1793: On the Terror",
+        "favs": 106,
+        "play-count": 1116
+    },
+    {
+        "value": "1844c",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1844: The Widow's Son",
+        "favs": 30,
+        "play-count": 943
+    },
+    {
+        "value": "1845",
+        "data-tags": [
+            "Historical",
+            "State"
+        ],
+        "name": "1845: Utopian and Locofoco",
+        "favs": 29,
+        "play-count": 463
+    },
+    {
+        "value": "1848b",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1848 - Cass vs Clay",
+        "favs": 35,
+        "play-count": 366
+    },
+    {
+        "value": "1852T",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "Viva Taylor",
+        "favs": 78,
+        "play-count": 1108
+    },
+    {
+        "value": "1864",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1864: Hell on the Wabash",
+        "favs": 140,
+        "play-count": 985
+    },
+    {
+        "value": "1968Sumner",
+        "data-tags": [
+            "Funny"
+        ],
+        "name": "Sumner 68 Redux: Highway to Heaven",
+        "favs": 78,
+        "play-count": 677
+    },
+    {
+        "value": "1872",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1872: Turn the Rascals Out",
+        "favs": 52,
+        "play-count": 760
+    },
+    {
+        "value": "1876",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1876: Tilden or Blood",
+        "favs": 42,
+        "play-count": 582
+    },
+    {
+        "value": "1904",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1904: Money Talks",
+        "favs": 39,
+        "play-count": 782
+    },
+    {
+        "value": "1920",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1920: Return to Normalcy",
+        "favs": 206,
+        "play-count": 8141
+    },
+    {
+        "value": "1928",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1928: Who but Hoover?",
+        "favs": 47,
+        "play-count": 898
+    },
+    {
+        "value": "1936",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1936: Forward with Roosevelt!",
+        "favs": 36,
+        "play-count": 1721
+    },
+    {
+        "value": "1936B",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1936: Every Man A King!",
+        "favs": 17,
+        "play-count": 695
+    },
+    {
+        "value": "1956",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1956: Peace and Prosperity",
+        "favs": 109,
+        "play-count": 3596
+    },
+    {
+        "value": "1946",
+        "data-tags": [
+            "Historical",
+            "State"
+        ],
+        "name": "1946: The Making of a Crook",
+        "favs": 77,
+        "play-count": 1242
+    },
+    {
+        "value": "1948Red",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1948 Red",
+        "favs": 245,
+        "play-count": 2792
+    },
+    {
+        "value": "1952Red",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1952 Red",
+        "favs": 339,
+        "play-count": 3971
+    },
+    {
+        "value": "1956Red",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1956 Red",
+        "favs": 400,
+        "play-count": 14732
+    },
+    {
+        "value": "1963Korea",
+        "data-tags": [
+            "Historical",
+            "International"
+        ],
+        "name": "1963 Korea: Revolution",
+        "favs": 62,
+        "play-count": 1551
+    },
+    {
+        "value": "1964DraftLodge",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1964: Draft Lodge",
+        "favs": 101,
+        "play-count": 1166
+    },
+    {
+        "value": "1964Viva",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1964: Viva Kennedy",
+        "favs": 86,
+        "play-count": 890
+    },
+    {
+        "value": "1964Midnight",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "Midnight 1964",
+        "favs": 213,
+        "play-count": 1855
+    },
+    {
+        "value": "1968Romney",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1968: Too Right",
+        "favs": 115,
+        "play-count": 1610
+    },
+    {
+        "value": "1968TFC",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1968: Time For Choosing",
+        "favs": 69,
+        "play-count": 1207
+    },
+    {
+        "value": "1972TFC",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1972: Time For Choosing",
+        "favs": 61,
+        "play-count": 2583
+    },
+    {
+        "value": "1968Viva",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1968: Viva Kennedy",
+        "favs": 91,
+        "play-count": 1350
+    },
+    {
+        "value": "1971Korea",
+        "data-tags": [
+            "Historical",
+            "International"
+        ],
+        "name": "1971 Korea: Devolution",
+        "favs": 62,
+        "play-count": 900
+    },
+    {
+        "value": "1972Romney",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1972: Too Late",
+        "favs": 140,
+        "play-count": 2663
+    },
+    {
+        "value": "1972",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1972: Come Home America!",
+        "favs": 86,
+        "play-count": 1179
+    },
+    {
+        "value": "1972b",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1972: The Stand for the Whitehouse",
+        "favs": 100,
+        "play-count": 1302
+    },
+    {
+        "value": "1972d",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1972: Old Left, New World",
+        "favs": 155,
+        "play-count": 1913
+    },
+    {
+        "value": "1972Nixon",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1972: Peace With Honor",
+        "favs": 318,
+        "play-count": 5884
+    },
+    {
+        "value": "1972Humphrey",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1972: Battling the Torrents",
+        "favs": 91,
+        "play-count": 1089
+    },
+    {
+        "value": "1988b",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1988: Bluebirds Fly",
+        "favs": 45,
+        "play-count": 594
+    },
+    {
+        "value": "1976Agnew",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1976: The Agony of Agnew",
+        "favs": 50,
+        "play-count": 744
+    },
+    {
+        "value": "1992McGovern",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1992 McGovern",
+        "favs": 67,
+        "play-count": 1315
+    },
+    {
+        "value": "1996BR",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1996BR",
+        "favs": 56,
+        "play-count": 1051
+    },
+    {
+        "value": "1993PC",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1993: Post-Communist USA",
+        "favs": 65,
+        "play-count": 1529
+    },
+    {
+        "value": "2000ROC",
+        "data-tags": [
+            "International"
+        ],
+        "name": "ROC 2000",
+        "favs": 40,
+        "play-count": 1879
+    },
+    {
+        "value": "2000FP",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2000: Former Presidents",
+        "favs": 69,
+        "play-count": 3118
+    },
+    {
+        "value": "2000Bateman",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2000: The Millennium Psycho",
+        "favs": 69,
+        "play-count": 378
+    },
+    {
+        "value": "2000Jeb!",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2000: Jeb!",
+        "favs": 61,
+        "play-count": 1603
+    },
+    {
+        "value": "2008T",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2008: The America We Deserve",
+        "favs": 91,
+        "play-count": 849
+    },
+    {
+        "value": "2008",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "2008",
+        "favs": 69,
+        "play-count": 1152
+    },
+    {
+        "value": "2008SpongeBob",
+        "data-tags": [
+            "Funny"
+        ],
+        "name": "2008 - Spongebob SquarePants",
+        "favs": 302,
+        "play-count": 2974
+    },
+    {
+        "value": "2008Bryan",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "Bryan '08",
+        "favs": 55,
+        "play-count": 1392
+    },
+    {
+        "value": "2016b",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2016b - Sanders v. Trump",
+        "favs": 35,
+        "play-count": 403
+    },
+    {
+        "value": "2016d",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2016d: Rubio vs Biden",
+        "favs": 44,
+        "play-count": 863
+    },
+    {
+        "value": "1992Redux",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1992",
+        "favs": 52,
+        "play-count": 1956
+    },
+    {
+        "value": "2016DNC",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "2016 Democratic Primaries",
+        "favs": 129,
+        "play-count": 1586
+    },
+    {
+        "value": "2016O'Malley",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "Sequel to 2016DNC",
+        "favs": 99,
+        "play-count": 813
+    },
+    {
+        "value": "2016FourCandidate1",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2016 Four-Way (Clinton/Rubio)",
+        "favs": 106,
+        "play-count": 1132
+    },
+    {
+        "value": "2016FourCandidate2",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2016 Four-Way (Trump/Sanders)",
+        "favs": 125,
+        "play-count": 2112
+    },
+    {
+        "value": "2020a",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2020: Hell",
+        "favs": 39,
+        "play-count": 1003
+    },
+    {
+        "value": "2020BERN",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2020BERN",
+        "favs": 34,
+        "play-count": 1527
+    },
+    {
+        "value": "2022PAGov",
+        "data-tags": [
+            "Historical",
+            "State"
+        ],
+        "name": "2022 Pennsylvania Gubernatorial Election",
+        "favs": 34,
+        "play-count": 483
+    },
+    {
+        "value": "2025NL",
+        "data-tags": [
+            "Althist",
+            "International"
+        ],
+        "name": "2025 Netherlands",
+        "favs": 88,
+        "play-count": 2214
+    },
+    {
+        "value": "2020LT",
+        "data-tags": [
+            "Historical",
+            "International"
+        ],
+        "name": "2020 Lithuania - Plagues and Plaques",
+        "favs": 93,
+        "play-count": 4020
+    },
+    {
+        "value": "1796",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1796: The First of Many",
+        "favs": 24,
+        "play-count": 307
+    },
+    {
+        "value": "1964d",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1964d",
+        "favs": 59,
+        "play-count": 672
+    },
+    {
+        "value": "2016ARNOLD",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2016: Arnold Amendment",
+        "favs": 48,
+        "play-count": 470
+    },
+    {
+        "value": "2012T",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "2012: Outsider Comes Early",
+        "favs": 48,
+        "play-count": 741
+    },
+    {
+        "value": "1984b",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1984b: Reagan Assassination",
+        "favs": 60,
+        "play-count": 848
+    },
+    {
+        "value": "1996Powell",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "General Powell in \u201996",
+        "favs": 100,
+        "play-count": 806
+    },
+    {
+        "value": "1972Biden",
+        "data-tags": [
+            "Historical",
+            "State"
+        ],
+        "name": "Biden 1972",
+        "favs": 72,
+        "play-count": 563
+    },
+    {
+        "value": "1972TNO",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1972 TNO",
+        "favs": 77,
+        "play-count": 1082
+    },
+    {
+        "value": "2015DK",
+        "data-tags": [
+            "International"
+        ],
+        "name": "2015 Denmark - Rural Rebellion",
+        "favs": 73,
+        "play-count": 546
+    },
+    {
+        "value": "2022TimRyan",
+        "data-tags": [
+            "Historical",
+            "State"
+        ],
+        "name": "Ohio 2022 Tim Ryan",
+        "favs": 64,
+        "play-count": 1057
+    },
+    {
+        "value": "1964Beatles",
+        "data-tags": [
+            "Historical"
+        ],
+        "name": "1964: The Beatles",
+        "favs": 43,
+        "play-count": 537
+    },
+    {
+        "value": "2000Palpatine",
+        "data-tags": [
+            "Funny"
+        ],
+        "name": "2000 Palpatine",
+        "favs": 162,
+        "play-count": 4917
+    },
+    {
+        "value": "1988HART",
+        "data-tags": [
+            "Althist"
+        ],
+        "name": "1988HART",
+        "favs": 86,
+        "play-count": 3649
+    },
+    {
+        "value": "1860",
+        "data-tags": [
+            "VPs_Only"
+        ],
+        "name": "1860 Alt VPs",
+        "favs": 24,
+        "play-count": 1875
+    },
+    {
+        "value": "2021DE",
+        "data-tags": [
+            "Historical",
+            "International"
+        ],
+        "name": "Germany 2021 - Between Decades",
+        "favs": 661,
+        "play-count": 26460
+    },
+    {
+        "value": "AnimalCrossingMayoralElection",
+        "data-tags": [
+            "Funny"
+        ],
+        "name": "Animal Crossing Mayoral Election",
+        "favs": 122,
+        "play-count": 1845
+    },
+    {
+        "value": "Divorce",
+        "data-tags": [
+            "Funny"
+        ],
+        "name": "The Divorce Trail",
+        "favs": 6,
+        "play-count": 178
+    },
+    {
+        "value": "2022NY",
+        "data-tags": [
+            "State"
+        ],
+        "name": "2022NY",
+        "favs": 34,
+        "play-count": 877
+    }
+]

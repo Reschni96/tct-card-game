@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plays By Day</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="unique-banner-container">
+        <img src="/static/images/CampaignTrailMojo.png" alt="Site Banner" class="site-banner">
+    </div>
+    <div class="main-container">
+    <h1>Plays By Day</h1>
+    {% include '_navbar.html' %}
+    <br>
+    <i>Click the day for more details!</i>
+
+    <!-- Display plays by day data -->
+    {% if daily_stats %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Total Plays</th>
+                    <th>Most Played Mod (Plays)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stats in daily_stats %}
+                    <tr>
+                        <td><a href="{{ url_for('mod_plays_by_period', date=stats.date, period='day') }}">{{ stats.date }}</a></td>
+                        <td>{{ stats.last_day }}</td>
+                        <td>{{ stats.most_played_mod.name }} ({{ stats.most_played_mod.play_count }})</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No data available for plays by day.</p>
+    {% endif %}
+    </div>
+</body>
+</html>

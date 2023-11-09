@@ -1,0 +1,33 @@
+{
+    "date": "20231108",
+    "total_plays": {
+        "last_day": {
+            "change": 2597,
+            "most_played_mod": {
+                "name": "Germany 2021 - Between Decades",
+                "play_count": 406
+            }
+        },
+        "last_three_days": {
+            "change": 8520,
+            "most_played_mod": {
+                "name": "Rocky 64!",
+                "play_count": 1242
+            }
+        },
+        "last_week": {
+            "change": 18641,
+            "most_played_mod": {
+                "name": "Germany 2021 - Between Decades",
+                "play_count": 2428
+            }
+        },
+        "last_month": {
+            "change": 19988,
+            "most_played_mod": {
+                "name": "Germany 2021 - Between Decades",
+                "play_count": 2428
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+<!-- templates/cardgame.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Card Game</title>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Card Game</h1>
+        <!-- The player number should be assigned and tracked on the server-side -->
+        <div id="square" style="width: 100px; height: 100px; background-color: {{ square_color }};"></div>
+
+        <button id="changeColorBtn">Change Color</button>
+    </div>
+</body>
+<script>
+    var socket = io.connect('/cardgame');
+
+    // Emit a 'join' event when the page is loaded
+    socket.emit('join', {game_id: "{{ game_id }}"});
+
+    // Listen for 'game_update' events from the server
+    socket.on('game_update', function(data) {
+        // Update the square color and any other elements as necessary
+        $("#square").css("background-color", data.square_color);
+    });
+
+    // Emit an 'action' event when the Change Color button is clicked
+    $("#changeColorBtn").click(function() {
+        socket.emit('action', {game_id: "{{ game_id }}", action: 'change_color'});
+    });
+
+    // Notify the server when the user leaves the game
+    window.addEventListener('beforeunload', function() {
+        socket.emit('leave', {game_id: "{{ game_id }}"});
+    });
+</script>
+</html>
+
+</html>

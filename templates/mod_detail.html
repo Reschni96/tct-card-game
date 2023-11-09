@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMPAIGNTRAILMOJO - {{ mod_name }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="unique-banner-container">
+        <img src="/static/images/CampaignTrailMojo.png" alt="Site Banner" class="site-banner">
+    </div>
+    <div class="main-container">
+    <h1>{{ mod_data['current']['name'] }}</h1>
+    {% include '_navbar.html' %}
+    <p>Total Plays: {{ mod_data['current']['play_count'] }}</p>
+    <p>Total Favourites: {{ mod_data['current']['favs'] }}</p>
+    <p>Plays in the Last Day: {{ mod_data['1']['play_count_change'] }}</p>
+    <p>Plays in the Last 3 Days: {{ mod_data['3']['play_count_change'] }}</p>
+    <p>Plays in the Last 7 Days: {{ mod_data['7']['play_count_change'] }}</p>
+    <p>Plays in the Last 30 Days: {{ mod_data['30']['play_count_change'] }}</p>
+    <p>Favourites in the Last Day: {{ mod_data['1']['favs_change'] }}</p>
+    <p>Favourites in the Last 3 Days: {{ mod_data['3']['favs_change'] }}</p>
+    <p>Favourites in the 7 Days: {{ mod_data['7']['favs_change'] }}</p>
+    <p>Favourites in the 30 Days: {{ mod_data['30']['favs_change'] }}</p>
+    <br>
+    <div class="button-group">
+        <a href="{{ url_for('index') }}" class="button">Back</a>
+        <a href="https://campaign-trail-showcase.github.io/campaign-trail/index.html?modName={{ mod_name|urlencode }}" class="button">Play!</a>
+    </div>
+    </div>
+</body>
+</html>
