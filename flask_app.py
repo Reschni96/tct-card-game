@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 import calendar
-from cardgame.card_app import card_app, game_states  # Import the Blueprint
+from cardgame.card_app import card_app # Import the Blueprint
 from db_handler import get_connection
 
 app = Flask(__name__)

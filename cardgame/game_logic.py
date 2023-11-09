@@ -23,6 +23,7 @@ class Player:
         self.hand = Hand()  # The cards currently in the player's hand
         self.retirement_area = RetirementArea()  # Area for cards that have been used
         self.board = None  # This will be a reference to the shared board
+        self.hasPassed = False
 
     def draw_card(self):
         """Draw a card from the player's deck and add it to their hand."""
